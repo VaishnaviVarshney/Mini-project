@@ -1,0 +1,141 @@
+
+    <!DOCTYPE html>
+    <html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Contact Form</title>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              background: #f4f7f8;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+            }
+            .form-container {
+              width: 350px;
+              background: #ffe5b4;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+              border: 1px solid #ccc;
+            }
+
+            fieldset {
+              border: 1px solid #aaa;
+              border-radius: 8px;
+              margin-bottom: 15px;
+              padding: 15px;
+            }
+
+            legend {
+              font-weight: bold;
+              padding: 0 8px;
+              color: #333;
+            }
+
+            label {
+              display: block;
+              margin-top: 10px;
+              font-size: 14px;
+              color: #444;
+            }
+
+            input[type="text"], input[type="email"], input[type="tel"] {
+              width: 100%;
+              padding: 8px;
+              margin-top: 5px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              box-sizing: border-box;
+            }
+
+            input::placeholder {
+              font-size: 13px;
+              color: #888;
+            }
+
+            .btn {
+              margin-top: 15px;
+              width: 100%;
+              padding: 10px;
+              background: #007BFF;
+              color: white;
+              font-size: 15px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+
+            .btn:hover {
+              background: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="form-container">
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" placeholder="Enter first name" required>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" placeholder="Enter last name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="10-digit number" pattern="[0-9]{10}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Job Details</legend>
+
+                <label for="position">Position Applied For:</label>
+
+                <select id="position" name="position">
+                    <option value="">--Select position--</option>
+                    <option value="intern">intern</option>
+                    <option value="hr">HR</option>
+                    <option value="HEAD">COMPANY HEAD</option>
+
+                </select>
+
+                <label for="year of experience">Year Of Experience:</label>
+                <input type="number" id="year of experience" >
+
+                <label for="cover letter">CoverLetter:</label>
+                <input type="text" id="cover letter" name="cover letter" >
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Availability
+                </legend>
+                <label> Available start date</label>
+                <label for="date"></label>
+                <input type="date" id="date">
+
+                <label> willing to relocate?</label>
+
+                <input type="radio" id="yes" name="choice" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="choice" value="No">
+                <label for="no">No</label>
+
+            </fieldset>
+
+            <button type="submit" class="btn">Submit</button>
+
+        </form>
+    </div>
+    </body>
+    </html>
+
+
+
+
